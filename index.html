@@ -68,7 +68,12 @@
 </head>
 
 <body>
-    <h1>Kooks Shop</h1>
+    <h1>Kooks Shop </h1>
+    <ul>
+        <li><button class='btn btn-info' onclick="changeH1Text()">Header to red</button></li>
+    </ul>
+
+
     <label for="message">Cunstomer Feedback: </label>
     <input type="text" name='message' value='Type here!'></input>
 
@@ -144,7 +149,10 @@
 </body>
 <script>
     // EX7.: Write a function to change the h1 text
-
+    const changeH1Text = function () {
+        let tagOne = document.querySelectorAll("h1")
+        tagOne[0].style.color = 'Red'
+    }
 </script>
 
 </html>
