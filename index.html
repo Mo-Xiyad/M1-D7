@@ -19,16 +19,27 @@
 
         html,
         body {
-            height: 100%;
             background: #fff;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
             font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+
+
+        .wrapper {
+            flex: 1;
+        }
+
+        #clickByttons {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
         }
 
         div.table {
-            background: #fff;
             display: flex;
             flex-direction: row;
             justify-content: center;
@@ -61,91 +72,98 @@
             height: 40px;
         }
 
-        .wrapper {
-            min-height: 80%;
+        #footer {
+            background: #333;
+            color: #fff;
+        }
+
+        #feedbackform {
+            margin: 20%;
         }
     </style>
 </head>
 
 <body>
     <h1>Kooks Shop </h1>
-    <ul>
-        <li><button class='btn btn-info m-2' onclick="changeH1Text()">Header to red</button></li>
-        <li><button class='btn btn-info m-2' onclick="backgroundColor()">Body color</button></li>
-        <li><button class='btn btn-info m-2' onclick="footerAddress()">Change address</button></li>
-    </ul>
+    <div class="wrapper">
+        <!-- click on buttons -->
+        <div class="mt-5" id='clickByttons'>
+            <button class='btn btn-dark m-2' onclick="changeH1Text()">Header to red</button>
+            <button class='btn btn-dark m-2' onclick="backgroundColor()">Body color</button>
+            <button class='btn btn-dark m-2' onclick="footerAddress()">Change address</button>
+        </div>
 
+        <!-- product Table  -->
+        <div class="table wrapper mt-5">
+            <table>
+                <tr>
+                    <th>Products</th>
+                    <th></th>
+                    <th>Code</th>
+                    <th>Price</th>
+                    <th>Order</th>
+                </tr>
+                <tr>
+                    <td>Apple</td>
+                    <td style='text-align: center;'><img src="./Apple.jpeg" alt="alppe"></td>
+                    <td>#1525</td>
+                    <td>$2</td>
+                    <td> <a href="https://github.com/Mo-Xiyad/M1-D7"><i class="fas fa-shopping-cart"></i></a></td>
+                </tr>
+                <tr>
+                    <td>Orange</td>
+                    <td style='text-align: center;'><img src="./Orange.jpeg" alt="Orange"></td>
+                    <td>#265</td>
+                    <td>$1.2</td>
+                    <td> <a href="https://github.com/Mo-Xiyad/M1-D7"><i class="fas fa-shopping-cart"></i></a></td>
+                </tr>
+                <tr>
+                    <td>Grapes</td>
+                    <td style='text-align: center;'><img src="./Grapes.jpeg" alt="Grapes"></td>
+                    <td>#255</td>
+                    <td>$2.5</td>
+                    <td> <a href="https://github.com/Mo-Xiyad/M1-D7"><i class="fas fa-shopping-cart"></i></a></td>
+                </tr>
+                <tr>
+                    <td>Citrus</td>
+                    <td style='text-align: center;'><img src="./Citrus.jpeg" alt="Citrus"></td>
+                    <td>#876</td>
+                    <td>$4</td>
+                    <td> <a href="https://github.com/Mo-Xiyad/M1-D7"><i class="fas fa-shopping-cart"></i></a></td>
+                </tr>
+                <tr>
+                    <td>Stone fruit</td>
+                    <td style='text-align: center;'><img src="./Stone fruit.jpeg" alt="Stone fruit"></td>
+                    <td>#3215</td>
+                    <td>$7</td>
+                    <td> <a href="https://github.com/Mo-Xiyad/M1-D7"><i class="fas fa-shopping-cart"></i></a></td>
+                </tr>
+                <tr>
+                    <td>Melons</td>
+                    <td style='text-align: center;'><img src="./melon.jpeg" alt="Melons"></td>
+                    <td>#456</td>
+                    <td>$11</td>
+                    <td> <a href="https://github.com/Mo-Xiyad/M1-D7"><i class="fas fa-shopping-cart"></i></a></td>
+                </tr>
+            </table>
+        </div>
 
-    <label for="message">Cunstomer Feedback: </label>
-    <input type="text" name='message' value='Type here!'></input>
+        <!-- Feedback Form -->
+        <div id='feedbackform' class="mt-5 mb-5" id=''>
+            <div class="input-group mb-5">
+                <span class="input-group-text">Your feedback</span>
+                <textarea class="form-control" aria-label="With textarea"></textarea>
+            </div>
+        </div>
 
-    <div class="table wrapper">
-        <table>
-            <tr>
-                <th>Products</th>
-                <th>Code</th>
-                <th>Price</th>
-                <th>Order</th>
-            </tr>
-            <tr>
-                <td>Apple
-                    <img src="./Apple.jpeg" alt="alppe">
-                </td>
-                <td>#1525</td>
-                <td>$2</td>
-                <td> <a href="https://github.com/Mo-Xiyad/M1-D7"><i class="fas fa-shopping-cart"></i></a></td>
-            </tr>
-            <tr>
-                <td>Orange
-                    <img src="./Orange.jpeg" alt="Orange">
-                </td>
-                <td>#265</td>
-                <td>$1.2</td>
-                <td> <a href="https://github.com/Mo-Xiyad/M1-D7"><i class="fas fa-shopping-cart"></i></a></td>
-            </tr>
-            <tr>
-                <td>Grapes
-                    <img src="./Grapes.jpeg" alt="Grapes">
-                </td>
-                <td>#255</td>
-                <td>$2.5</td>
-                <td> <a href="https://github.com/Mo-Xiyad/M1-D7"><i class="fas fa-shopping-cart"></i></a></td>
-            </tr>
-            <tr>
-                <td>Citrus
-                    <img src="./Citrus.jpeg" alt="Citrus">
-                </td>
-                <td>#876</td>
-                <td>$4</td>
-                <td> <a href="https://github.com/Mo-Xiyad/M1-D7"><i class="fas fa-shopping-cart"></i></a></td>
-            </tr>
-            <tr>
-                <td>Stone fruit
-                    <img src="./Stone fruit.jpeg" alt="Stone fruit">
-                </td>
-                <td>#3215</td>
-                <td>$7</td>
-                <td> <a href="https://github.com/Mo-Xiyad/M1-D7"><i class="fas fa-shopping-cart"></i></a></td>
-            </tr>
-            <tr>
-                <td>Melons
-                    <img src="./melon.jpeg" alt="Melons">
-                </td>
-                <td>#456</td>
-                <td>$11</td>
-                <td> <a href="https://github.com/Mo-Xiyad/M1-D7"><i class="fas fa-shopping-cart"></i></a></td>
-            </tr>
-        </table>
     </div>
 
 
-    <footer class="bg-light text-center text-lg-start">
-
+    <footer id='footer' class=''>
         <div class="text-center p-3">
-            <Address> Stockholm, Sweden</Address>
-        </div>
-
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            <div class="text-center">
+                <Address> Stockholm, Sweden</Address>
+            </div>
             <a href="https://www.instagram.com/ziii_ed/"> <i class="fab fa-instagram"></i></a>
             <a href="https://github.com/Mo-Xiyad"> <i class="fab fa-github"></i></a>
             <a href="https://www.linkedin.com/in/zee-xiyad"> <i class="fab fa-linkedin"></i></a>
@@ -167,7 +185,11 @@
     // EX9.: Write a function to change the footer address with a fake one
     const footerAddress = function () {
         let add = document.getElementsByTagName('address')
-        add[0].innerText = 'Maldives'
+        add[0].innerText = 'Fake Address'
+    }
+    // EX10.: Write a function to add a CSS class to every Amazon link
+    const changeColor = function () {
+
     }
 </script>
 
