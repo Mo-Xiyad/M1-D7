@@ -70,7 +70,8 @@
 <body>
     <h1>Kooks Shop </h1>
     <ul>
-        <li><button class='btn btn-info' onclick="changeH1Text()">Header to red</button></li>
+        <li><button class='btn btn-info m-2' onclick="changeH1Text()">Header to red</button></li>
+        <li><button class='btn btn-info m-2' onclick="backgroundColor()">Body color</button></li>
     </ul>
 
 
@@ -152,6 +153,11 @@
     const changeH1Text = function () {
         let tagOne = document.querySelectorAll("h1")
         tagOne[0].style.color = 'Red'
+    }
+    // EX8.: Write a function to change the page background color
+    const backgroundColor = function () {
+        let body = document.getElementsByTagName('body')
+        body[0].style.backgroundColor = 'pink'
     }
 </script>
 
