@@ -80,11 +80,19 @@
         #feedbackform {
             margin: 20%;
         }
+
+        .turnred {
+            color: red;
+        }
+
+        .turnpink {
+            background-color: rosybrown;
+        }
     </style>
 </head>
 
 <body>
-    <h1>Kooks Shop </h1>
+    <h1 id>Kooks Shop </h1>
     <div class="wrapper">
         <!-- click on buttons -->
         <div class="mt-5" id='clickByttons'>
@@ -175,17 +183,25 @@
     // EX7.: Write a function to change the h1 text
     const changeH1Text = function () {
         let tagOne = document.querySelectorAll("h1")
-        tagOne[0].style.color = 'Red'
+        tagOne[0].classList.toggle('turnred')
     }
     // EX8.: Write a function to change the page background color
     const backgroundColor = function () {
         let body = document.getElementsByTagName('body')
-        body[0].style.backgroundColor = 'pink'
+        body[0].classList.toggle('turnpink')
     }
     // EX9.: Write a function to change the footer address with a fake one
+    let fakeAddress
     const footerAddress = function () {
-        let add = document.getElementsByTagName('address')
-        add[0].innerText = 'Fake Address'
+        if (fakeAddress === undefined) {
+            fakeAddress = document.getElementsByTagName('address')
+            fakeAddress[0].innerText = 'Fake Address'
+        }
+        else {
+            fakeAddress.remove()
+            fakeAddress = undefined
+        }
+
     }
     // EX10.: Write a function to add a CSS class to every Amazon link
     const changeColor = function () {
